@@ -6,5 +6,9 @@ get '/' do
 end
 
 post '/' do
-  "CLOUDWALK " + params["buf"]
+  if params["anotherVariable"]
+    "CLOUDWALK #{params["buf"]} #{params["anotherVariable"]}"
+  else
+    "CLOUDWALK #{params["buf"]}"
+  end
 end
