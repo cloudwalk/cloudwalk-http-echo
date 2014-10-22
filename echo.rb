@@ -11,9 +11,12 @@ get '/' do
 end
 
 post '/' do
+  n = Random.rand(1...35)
+  salt = rand(36**n).to_s(36) # Transform to base 27 + 9 for a-z0-9
+  p salt
   if params["anotherVariable"]
-    "CLOUDWALK #{params["buf"]} #{params["anotherVariable"]}"
+    salt + "#{params["buf"]} #{params["anotherVariable"]}"
   else
-    "CLOUDWALK #{params["buf"]}"
+    salt + "#{params["buf"]}"
   end
 end
