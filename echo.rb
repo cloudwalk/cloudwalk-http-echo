@@ -1,13 +1,7 @@
-require "rubygems"
-require "sinatra"
-
-#Bound to this address so that external hosts can access it, VERY IMPORTANT!
-set :bind, '0.0.0.0'
-
-set :logging, true
+require 'sinatra'
 
 get '/' do
-  redirect "http://docs.cloudwalk.io"
+  redirect "https://docs.cloudwalk.io"
 end
 
 post '/' do

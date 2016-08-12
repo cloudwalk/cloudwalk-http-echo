@@ -1,2 +1,2 @@
-require './eco'
+require './echo'
 run Sinatra::Application
