@@ -1,2 +1,2 @@
 require './echo'
-run Sinatra::Application
+run Echo

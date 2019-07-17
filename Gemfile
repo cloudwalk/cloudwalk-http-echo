@@ -1,6 +1,14 @@
 source 'https://rubygems.org'
 
-ruby '2.5.1'
+ruby '2.6.2'
 
 gem 'puma'
 gem 'sinatra'
+
+group :test do
+  gem 'coveralls'
+  gem 'minitest'
+  gem 'mocha'
+  gem 'rack-test'
+  gem 'simplecov'
+end
